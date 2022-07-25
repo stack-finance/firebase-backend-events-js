@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "firebase-backend-events-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "firebase SDK to log events for server-to-server or client-to-server interactions",
   "main": "index.js",
   "scripts": {
@@ -19,12 +19,12 @@
   "license": "GNU General Public License v3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stack-finance/moengage-sdk.git"
+    "url": "https://github.com/eetrip/firebase-backend-events-js"
   },
   "bugs": {
-    "url": "https://github.com/stack-finance/moengage-sdk/issues"
+    "url": "https://github.com/eetrip/firebase-backend-events-js/issues"
   },
-  "homepage": "https://github.com/stack-finance/moengage-sdk#readme",
+  "homepage": "https://github.com/eetrip/firebase-backend-events-js#readme",
   "dependencies": {
     "node-fetch": "^3.2.9"
   }
