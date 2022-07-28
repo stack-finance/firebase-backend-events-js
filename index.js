@@ -1,21 +1,21 @@
 import fetch from 'node-fetch';
 
 export class FirebaseEvents {
-  constructor() {}
+  constructor(firebaseAppId, apiSecret) {
+    this.firebaseAppId = firebaseAppId;
+    this.apiSecret = apiSecret;
+  }
 
   triggerEvent(payload) {
     if (
       !payload
-      || !payload?.firebase_app_id
-      || !payload?.api_secret
       || !payload?.app_instance_id
-      || payload?.event?.name
+      || !payload?.event?.name
     ) {
-      throw Error('failed to trigger event, required feilds missing');
+      console.log('failed to trigger firebase event, required feilds missing');
+      return {};
     }
     const {
-      firebase_app_id,
-      api_secret,
       app_instance_id,
       non_personalized_ads = false,
       event: {
@@ -23,7 +23,7 @@ export class FirebaseEvents {
         params
       }
     } = payload;
-    return fetch(`https://www.google-analytics.com/mp/collect?firebase_app_id=${firebase_app_id}&api_secret=${api_secret}`, {
+    return fetch(`https://www.google-analytics.com/mp/collect?firebase_app_id=${this.firebaseAppId}&api_secret=${this.apiSecret}`, {
         method: "POST",
         body: JSON.stringify({
           "app_instance_id": app_instance_id,
