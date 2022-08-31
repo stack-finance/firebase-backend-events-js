@@ -7,6 +7,8 @@ export class FirebaseEvents {
   }
 
   triggerEvent(payload) {
+    console.log('triggering firebase event')
+    console.log(payload)
     return fetch(
       `https://www.google-analytics.com/mp/collect?firebase_app_id=${this.firebaseAppId}&api_secret=${this.apiSecret}`,
       {
