@@ -14,7 +14,7 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/pari056/firebase-backend-events-js.git
+git clone https://github.com/stack-finance/firebase-backend-events-js.git
 cd firebase-backend-events-js
 ```
 
