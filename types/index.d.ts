@@ -1,6 +1,14 @@
+import { Logger } from "pino";
+
 export class FirebaseEvents {
 
-    constructor()
+    /**
+     * Constructor for FirebaseEvents class.
+     * @param {string} firebaseAppId - The Firebase App ID for your project.
+     * @param {string} apiSecret - The API Secret for your Firebase project.
+     * @param {Logger} logger - An instance of Pino Logger for logging trigger events.
+     */   
+    constructor(firebaseAppId: string, apiSecret: string, logger: Logger)
   
     /**
      * Method to add a new event or update an existing event.
