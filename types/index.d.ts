@@ -1,4 +1,4 @@
-import { Logger } from "pino";
+import { Logger } from "nestjs-pino";
 
 export class FirebaseEvents {
 
