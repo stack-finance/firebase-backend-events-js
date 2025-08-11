@@ -1,14 +1,17 @@
-import { Logger } from "nestjs-pino";
-
 export class FirebaseEvents {
 
     /**
      * Constructor for FirebaseEvents class.
      * @param {string} firebaseAppId - The Firebase App ID for your project.
      * @param {string} apiSecret - The API Secret for your Firebase project.
-     * @param {Logger} logger - An instance of Pino Logger for logging trigger events.
      */   
-    constructor(firebaseAppId: string, apiSecret: string, logger: Logger)
+    constructor(firebaseAppId: string, apiSecret: string)
+
+    /**
+     * 
+     * @param {unknown} logger - Provide a logger from PinoJS and branches (NestJS Pino, etc.) 
+     */
+    setLogger(logger: any): void
   
     /**
      * Method to add a new event or update an existing event.

@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/eetrip/firebase-backend-events-js#readme",
   "dependencies": {
-    "nestjs-pino": "^4.4.0",
     "node-fetch": "^3.2.9"
   }
 }
