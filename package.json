@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@stack-finance/firebase-backend-events-js",
-  "version": "2.2.0",
+  "version": "1.0.2",
   "description": "firebase SDK to log events for server-to-server or client-to-server interactions",
   "main": "index.js",
   "scripts": {
