@@ -15,7 +15,7 @@ export class FirebaseEvents {
     this.logger = logger;
   }
 
-  async triggerEvent(payload: object) {
+  triggerEvent(payload: object) {
     if (this.logger) {
       this.logger.info(`Triggering Firebase event - ${this.firebaseAppId}`);
       this.logger.child({ payload: payload });
@@ -25,7 +25,7 @@ export class FirebaseEvents {
       console.info(payload);
     }
 
-    return await fetch(
+    return fetch(
       `https://www.google-analytics.com/mp/collect?firebase_app_id=${this.firebaseAppId}&api_secret=${this.apiSecret}`,
       {
         method: "POST",
