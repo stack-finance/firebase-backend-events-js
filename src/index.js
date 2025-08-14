@@ -19,7 +19,7 @@ export class FirebaseEvents {
     } else {
       // Pino Logger for event logging with layload
       this.logger.info(`Triggering Firebase event - ${this.firebaseAppId}`);
-      this.logger.child({'payload': payload});
+      this.logger.child({ payload: payload });
     }
 
     return fetch(
@@ -27,7 +27,7 @@ export class FirebaseEvents {
       {
         method: "POST",
         body: JSON.stringify(payload),
-      }
+      },
     );
   }
 }

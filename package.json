@@ -1,11 +1,18 @@
 {
-  "type": "module",
-  "name": "@stack-finance/firebase-backend-events-js",
-  "version": "2.2.1",
-  "description": "firebase SDK to log events for server-to-server or client-to-server interactions",
+  "name": "firebase-backend-events-js",
+  "version": "2.3.0",
+  "description": "Firebase SDK to log events for server-to-server or client-to-server interactions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "check": "biome check src/",
+    "format": "biome check --write src/"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stack-finance/firebase-backend-events-js.git"
   },
   "keywords": [
     "firebase",
@@ -14,18 +21,20 @@
     "nodejs",
     "log"
   ],
-  "types": "./types/index.d.ts",
   "author": "Stack Finance",
-  "license": "GNU General Public License v3.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stack-finance/firebase-backend-events-js"
-  },
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/stack-finance/firebase-backend-events-js/issues"
   },
   "homepage": "https://github.com/stack-finance/firebase-backend-events-js#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^24.2.1",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  },
   "dependencies": {
-    "node-fetch": "^3.2.9"
+    "node-fetch": "^3.3.2"
   }
 }
