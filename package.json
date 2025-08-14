@@ -1,5 +1,6 @@
 {
-  "name": "firebase-backend-events-js",
+  "type": "module",
+  "name": "@stack-finance/firebase-backend-events-js",
   "version": "2.3.0",
   "description": "Firebase SDK to log events for server-to-server or client-to-server interactions",
   "main": "index.js",
@@ -8,7 +9,6 @@
     "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "check": "biome check src/",
     "format": "biome check --write src/"
-
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "pino": "^9.9.0"
   }
 }
